@@ -8,6 +8,10 @@ namespace Day13Assignment
         {
             MaxNumber maxNumber = new MaxNumber();
             maxNumber.MaxNumber_Three();
+
+            MaxString maxString = new MaxString();
+            maxString.MaxString_Three();
         }
+
     }
 }
