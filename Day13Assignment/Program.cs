@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace Day13Assignment
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            MaxNumber maxNumber = new MaxNumber();
+            maxNumber.MaxNumber_Three();
+        }
+    }
+}
