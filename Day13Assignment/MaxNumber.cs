@@ -10,11 +10,11 @@ namespace Day13Assignment
     {
         public void MaxNumber_Three()
         {
-            int first, second, third;
+            float first, second, third;
             Console.WriteLine("Enter Three Numbers to compare which is largest");
-            first = Int32.Parse(Console.ReadLine());
-            second = Int32.Parse(Console.ReadLine());
-            third = Int32.Parse(Console.ReadLine());
+            first = float.Parse(Console.ReadLine());
+            second = float.Parse(Console.ReadLine());
+            third = float.Parse(Console.ReadLine());
 
             int status = first.CompareTo(second);
             int status2 = first.CompareTo(third);
