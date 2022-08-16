@@ -6,41 +6,46 @@ using System.Threading.Tasks;
 
 namespace Day13Assignment
 {
-    public class MaxNumber
+
+    public  class MaxNumber<T> where T : IComparable
     {
-        public void MaxNumber_Three()
+        public T firstValue, secondValue, thirdValue;
+
+        public MaxNumber(T firstValue, T secondValue, T thirdValue)
         {
-            float first, second, third;
-            Console.WriteLine("Enter Three Numbers to compare which is largest");
-            first = float.Parse(Console.ReadLine());
-            second = float.Parse(Console.ReadLine());
-            third = float.Parse(Console.ReadLine());
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
 
-            int status = first.CompareTo(second);
-            int status2 = first.CompareTo(third);
-            int status3 = second.CompareTo(third);
-
-            if (status > 0)
+        public static T MaxValue(T firstValue, T secondValue, T thirdValue)
+        {
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue)>0 ||
+                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue)>0 ||
+                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >=0)
             {
-                if (status2 > 0)
-                {
-                    Console.WriteLine("Fisrt number is maximum number " +first);
-                } 
-                else
-                {
-                    Console.WriteLine("Third number is max number " +third);
-                }
+                return firstValue;
             }
-            else if (status3 > 0)
+            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue)>0 ||
+                secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue)>0 ||
+                secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >=0)
             {
-                Console.WriteLine("second is max number " +second);
+                return secondValue;
             }
             else
             {
-                Console.WriteLine("third is max number "+third);
+                return thirdValue;
             }
+            return default;
+        }
+        public T MaxMethod()
+        {
+            T max = MaxNumber<T>.MaxValue(this.firstValue, this.secondValue, this.thirdValue);
 
-
+            T max1 = MaxNumber<T>.MaxValue(this.firstValue, this.secondValue, this.thirdValue);
+            return max;
+            return max1;
         }
     }
+
 }
