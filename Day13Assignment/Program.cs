@@ -14,19 +14,23 @@ namespace Day13Assignment
             //MaxString maxString = new MaxString();
             //maxString.MaxString_Three();
 
-            MaxNumber<int> maxNumber = new MaxNumber<int>(10,20,30);
-            int max = maxNumber.MaxMethod(); 
-            Console.WriteLine("maximum number is " + max);
+            //MaxNumber<int> maxNumber = new MaxNumber<int>(10,20,30);
+            //int max = maxNumber.MaxMethod(); 
+            //Console.WriteLine("maximum number is " + max);
 
-            MaxNumber<char> maxNumber1 = new MaxNumber<char>('a', 'b', 'c');
-            char max1 = maxNumber1.MaxMethod(); 
-            Console.WriteLine("maximum number is " + max1);
+            //MaxNumber<char> maxNumber1 = new MaxNumber<char>('a', 'b', 'c');
+            //char max1 = maxNumber1.MaxMethod(); 
+            //Console.WriteLine("maximum number is " + max1);
 
 
-            MaxNumber<string> maxNumber2 = new MaxNumber<string>("apple", "boy", "cattle");
-            string max2 = maxNumber2.MaxMethod();
-            Console.WriteLine("maximum number is " + max2);
+            //MaxNumber<string> maxNumber2 = new MaxNumber<string>("apple", "boy", "cattle");
+            //string max2 = maxNumber2.MaxMethod();
+            //Console.WriteLine("maximum number is " + max2);
 
+
+            int[] arr = { 112, 344, 432, 555, 678 };
+            Maximum_Number obj = new Maximum_Number(arr);
+            obj.PrintMaxValue();
         }
 
     }
