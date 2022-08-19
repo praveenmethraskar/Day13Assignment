@@ -29,8 +29,12 @@ namespace Day13Assignment
 
 
             int[] arr = { 112, 344, 432, 555, 678 };
-            Maximum_Number obj = new Maximum_Number(arr);
+            Maximum_Number<int> obj = new Maximum_Number<int>(arr);
             obj.PrintMaxValue();
+            Console.WriteLine("\n");
+            float[] arr1 = { 112.6f, 344.8f, 432.9f, 555.23f, 678.36f };
+            Maximum_Number<float> obj1 = new Maximum_Number<float>(arr1);
+            obj1.PrintMaxValue();
         }
 
     }

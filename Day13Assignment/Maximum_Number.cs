@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace Day13Assignment
 {
-    public class Maximum_Number
+    public class Maximum_Number<T> where T : IComparable
     {
-        public int[] value;
+        public T[] value;
 
-        public Maximum_Number(int[] value)
+        public Maximum_Number(T[] value)
         {
             this.value = value;
         }
 
-        public int[] Sort(int[] values)
+        public T[] Sort(T[] values)
         {
             Array.Sort(values);
             return values;
         }
 
-        public int MaxValues(params int[] values)
+        public T MaxValues(params T[] values)
         {
             var sorted_values = Sort(values);
             return sorted_values[^1];
         }
 
-        public int MaxMethod()
+        public T MaxMethod()
         {
             var max = MaxValues(this.value);
             return max;
